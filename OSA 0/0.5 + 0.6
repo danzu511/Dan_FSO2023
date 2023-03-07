@@ -1,5 +1,6 @@
 "Tee kaavio tilanteesta, jossa käyttäjä menee selaimella osoitteeseen"
 
+0.5
 spa
   browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
   server-->>browser: Html document
@@ -19,7 +20,13 @@ data.json
 favicon.ico
   browser->>server: GET https://studies.cs.helsinki.fi/favicon.ico
   server-->>browser: Favicon icon
-  
+
+HTTP request made: 5
+
+
+"Tee kaavio tilanteesta, jossa käyttäjä luo uuden muistiinpanon single page -versiossa."
+
+0.6
 User inputs data to form
 
 new_note_spa
@@ -27,4 +34,4 @@ new_note_spa
   
 Javascript from spa.js handles user_input into user's html without GET requests.
 
-HTTP request made: 6
+HTTP request made: 1
