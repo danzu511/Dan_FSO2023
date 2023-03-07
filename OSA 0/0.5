@@ -1,0 +1,30 @@
+"Tee kaavio tilanteesta, jossa käyttäjä menee selaimella osoitteeseen"
+
+spa
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+  server-->>browser: Html document
+
+main.css
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+  server-->>browser: CSS stylesheet
+
+spa.js
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+  server-->>browser: Javascript file
+
+data.json
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+  server-->>browser: Json file
+  
+favicon.ico
+  browser->>server: GET https://studies.cs.helsinki.fi/favicon.ico
+  server-->>browser: Favicon icon
+  
+User inputs data to form
+
+new_note_spa
+  browser->>server: POST user_input 
+  
+Javascript from spa.js handles user_input into user's html without GET requests.
+
+HTTP request made: 6
