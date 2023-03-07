@@ -1,0 +1,24 @@
+new_note
+  browser ->> server: POST "Karvakorva" to server
+  
+notes
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+  server-->>browser: HTML document
+    
+main.css   
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+  server-->>browser: the css file
+    
+main.js   
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+  server-->>browser: the JavaScript file
+  
+data.json
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    server-->>browser: json file to browser 
+
+favicon.ico
+    browser->>server: GET https://studies.cs.helsinki.fi/favicon.ico
+    server-->>browser: favicon icon to browser
+  
+HTTP requests made: 6
